@@ -1,14 +1,13 @@
 import React from 'react';
-import { View } from 'react-native';
+import "./global.css"
+import 'react-native-gesture-handler';
+import Main from './src/Main';
 
 const App = (): React.JSX.Element => {
- return(
-  <>
-    <View>
-      
-    </View>
-  </>
- )
+
+  return (
+    <Main />
+  )
 }
 
 export default App;
