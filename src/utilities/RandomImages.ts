@@ -11,7 +11,7 @@ import image10 from '../assets/images/10.png';
 import image11 from '../assets/images/11.png';
 import image12 from '../assets/images/12.png';
 
-const images: Record<number, any> = {
+export const assetSerialImages: Record<number, any> = {
   1: image1,
   2: image2,
   3: image3,
@@ -26,11 +26,11 @@ const images: Record<number, any> = {
   12: image12,
 };
 
-const randomImage = (): any => {
+const returnRandomImages = (): any => {
   const min = 1;
   const max = 12;
   const random = Math.floor(Math.random() * (max - min + 1)) + min;
-  return images[random];
+  return assetSerialImages[random];
 };
 
-export default randomImage;
+export default returnRandomImages;
