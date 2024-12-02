@@ -26,12 +26,12 @@ const HomePage = (): React.JSX.Element => {
 
     const navigation = useNavigation<NavigationProps>();
 
-    const handleNavigation = (name: RouteNames) => {
-        navigation.navigate(ReturnRouteNames(name))
+    const handleNavigation = (name: RouteNames, item: any = undefined) => {
+        navigation.navigate(ReturnRouteNames(name),{...item})
     }
 
     const RecentTripItem = React.memo(({ item }: { item: RecentTripsModel }) => (
-        <TouchableOpacity onPress={() => handleNavigation('ExpensesList')} className="bg-white p-3 rounded-2xl mb-3 shadow-sm">
+        <TouchableOpacity onPress={() => handleNavigation('ExpensesList',{...item})} className="bg-white p-3 rounded-2xl mb-3 shadow-sm">
             <View>
                 <Image source={returnRandomImages()} className="w-36 h-36 mb-2" />
                 <Text className={`${themeColors.headingColor} font-bold`}>{item.place}</Text>

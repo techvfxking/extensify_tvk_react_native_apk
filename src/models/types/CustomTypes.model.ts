@@ -8,5 +8,5 @@ export declare type ReactCompBasicProp = ViewProps & {
 };
 
 export declare type NavigationProps = {
-    navigate: (name: string) => void;
+    navigate: (name: string, {}?:any) => void;
 };
