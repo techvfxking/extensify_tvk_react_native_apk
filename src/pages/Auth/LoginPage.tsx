@@ -5,7 +5,7 @@ import ScreenWrapper from '../../components/ScreenWrapper'
 const LoginPage = (): React.JSX.Element => {
   return (
     <ScreenWrapper>
-      <Text>LoginPage</Text>
+      <Text>LoginPage - </Text>
     </ScreenWrapper>
   )
 }
